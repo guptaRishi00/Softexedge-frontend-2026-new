@@ -1,5 +1,6 @@
 import { fetchAPI } from "@/utils/fetch-api";
 import { getStrapiURL } from "@/utils/get-strapi-url";
+import { image } from "framer-motion/client";
 import qs from "qs";
 
 const globalQuery = qs.stringify({
@@ -28,6 +29,18 @@ const globalQuery = qs.stringify({
                   },
                 },
               },
+            },
+          },
+        },
+        "layouts.footer": {
+          populate: {
+            socials: {
+              populate: {
+                icon: { fields: ["url", "name"] },
+              },
+            },
+            logo: {
+              fields: ["url", "name"],
             },
           },
         },
@@ -70,10 +83,39 @@ const homepageQuery = qs.stringify({
             counts: true,
           },
         },
-
         "homepage.video": {
           populate: {
             video: { fields: ["url", "name"] },
+          },
+        },
+        "homepage.our-services": {
+          populate: {
+            cards: {
+              populate: {
+                images: { fields: ["url", "name"] },
+                view: true,
+                read: true,
+              },
+            },
+          },
+        },
+        "homepage.why-softexedge": {
+          populate: {
+            image: {
+              fields: ["url", "name"],
+            },
+            lists: true,
+          },
+        },
+        "homepage.conversation": {
+          populate: {
+            card: {
+              populate: {
+                image: {
+                  fields: ["url", "name"],
+                },
+              },
+            },
           },
         },
       },
