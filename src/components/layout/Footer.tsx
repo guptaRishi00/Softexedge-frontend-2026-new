@@ -18,27 +18,27 @@ export default function Footer({ data }: any) {
           <div className="flex flex-col justify-between h-full min-h-[500px]">
             {/* Top Group: Title and Socials */}
             <div className="space-y-12">
-              <h2 className="text-5xl lg:text-[84px] font-bold leading-[0.9] tracking-tight">
+              <h2 className="text-5xl lg:text-[84px] font-bold leading-[0.9] tracking-tight ">
                 {mainTitle}
                 <span className="bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] bg-clip-text text-transparent block">
                   People Trust
                 </span>
               </h2>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-8">
                 {data.socials?.map((social: any) => (
                   <Link
                     key={social.id}
                     href={social.href}
                     target="_blank"
-                    className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-900 border border-white/10 hover:bg-zinc-800 transition-all hover:scale-105"
+                    className=" flex items-center justify-center transition-all hover:scale-105"
                   >
                     <Image
                       src={social.icon.url}
                       alt={social.title}
                       width={22}
                       height={22}
-                      className="object-contain"
+                      className="object-contain w-10"
                     />
                   </Link>
                 ))}

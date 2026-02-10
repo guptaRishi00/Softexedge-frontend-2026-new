@@ -130,3 +130,80 @@ export async function getHomepageData() {
   url.search = homepageQuery;
   return await fetchAPI(url.href, { method: "GET" });
 }
+
+const pageBySlugQuery = (slug: string) =>
+  qs.stringify({
+    filters: {
+      slug: {
+        $eq: `${slug}`,
+      },
+    },
+
+    populate: {
+      blocks: {
+        on: {
+          "shared.hero-section": {
+            populate: {
+              images: {
+                fields: ["url", "name"],
+              },
+            },
+          },
+          "aboutpage.testimonial": {
+            populate: {
+              cards: true,
+            },
+          },
+          "contactpage.questions": {
+            populate: {
+              list: {
+                populate: {
+                  cta: true,
+                },
+              },
+            },
+          },
+          "shared.get-started": {
+            populate: {
+              letsTalk: true,
+              viewWork: true,
+            },
+          },
+          "aboutpage.about": {
+            populate: {
+              image: {
+                fields: ["url", "name"],
+              },
+              cta: true,
+            },
+          },
+          "aboutpage.impact": {
+            populate: {
+              counts: true,
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                  background: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+
+export async function getPageBySlug(slug: string) {
+  const path = "/api/pages";
+  const BASE_URL = getStrapiURL();
+  const url = new URL(path, BASE_URL);
+  url.search = pageBySlugQuery(slug);
+  return await fetchAPI(url.href, {
+    method: "GET",
+    next: { revalidate: 3600 },
+  });
+}
