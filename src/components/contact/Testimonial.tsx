@@ -4,19 +4,23 @@ import { useState, useEffect } from "react";
 
 export default function Testimonial({ data }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const totalCards = data.cards.length;
+
+  // Safe checks for data consistency
+  const cards = data?.cards || [];
+  const totalCards = cards.length;
   const itemsToShow = 3;
-  const maxIndex = Math.max(0, totalCards - itemsToShow);
+  const totalPages = Math.ceil(totalCards / itemsToShow);
 
   useEffect(() => {
-    if (totalCards <= itemsToShow) return;
+    // If there's only 1 page or no cards, don't start the timer
+    if (totalPages <= 1) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+      setCurrentIndex((prev) => (prev >= totalPages - 1 ? 0 : prev + 1));
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [totalCards, maxIndex]);
+  }, [totalPages]); // Array size is now constant (1 item)
 
   return (
     <section className="py-16 px-4 md:px-16 bg-white overflow-hidden">
@@ -26,7 +30,8 @@ export default function Testimonial({ data }: any) {
         </h2>
 
         <div className="flex gap-2">
-          {[...Array(maxIndex + 1)].map((_, index) => (
+          {/* Use totalPages to render dots */}
+          {Array.from({ length: totalPages }).map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
@@ -44,10 +49,10 @@ export default function Testimonial({ data }: any) {
         <div
           className="flex transition-transform duration-700 ease-in-out -mx-3"
           style={{
-            transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
+            transform: `translateX(-${currentIndex * 100}%)`,
           }}
         >
-          {data.cards.map((card: any) => (
+          {cards.map((card: any) => (
             <div key={card.id} className="w-full md:w-1/3 px-3 shrink-0">
               <div className="bg-black text-white p-10 rounded-[20px] h-full flex flex-col gap-6">
                 <div>

@@ -1,5 +1,6 @@
 import AboutUs from "@/components/home/AboutUs";
 import Brands from "@/components/home/Brands";
+import CaseStudy from "@/components/home/CaseStudy";
 import Conversation from "@/components/home/Conversation";
 import HeroSectionHome from "@/components/home/HeroSectionHome";
 import OurServices from "@/components/home/OurServices";
@@ -49,6 +50,10 @@ export default async function Home({}: any) {
     (block: any) => block.__component === "homepage.conversation",
   );
 
+  const caseStudyData = response.data.blocks.find(
+    (block: any) => block.__component === "homepage.case-study",
+  );
+
   return (
     <div className="p-3 space-y-5">
       <HeroSectionHome data={heroSectionData} headerData={headerData} />
@@ -56,6 +61,7 @@ export default async function Home({}: any) {
       <AboutUs data={aboutdata} />
       <Video data={videoData} />
       <OurServices data={serviceData} />
+      <CaseStudy data={caseStudyData} />
       <WhySoftexedge data={whySoftexedgeData} />
       <Conversation data={conversationData} />
       <Footer data={footerData} />

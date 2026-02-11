@@ -62,7 +62,7 @@ export default function Footer({ data }: any) {
                   className="w-full bg-zinc-900/60 border border-white/10 rounded-full px-8 py-5 focus:outline-none focus:ring-1 focus:ring-[#2F85EA] transition-all placeholder:text-zinc-600 text-lg"
                 />
               </div>
-              <button className="w-full sm:w-auto bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] text-white px-12 py-5 rounded-full font-bold text-lg hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg">
+              <button className="w-full sm:w-auto bg-white text-black hover:text-white hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] px-12 py-5 rounded-full cursor-pointer text-lg hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg">
                 Subscribe
               </button>
             </div>

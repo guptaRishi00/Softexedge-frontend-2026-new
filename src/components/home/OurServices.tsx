@@ -24,7 +24,7 @@ export default function OurServices({ data }: any) {
       <div className="lg:py-15 lg:px-15">
         <p className="text-white text-5xl font-bold">{data.title}</p>
 
-        <div className="flex flex-col items-start w-full p-10 gap-10">
+        <div className="flex flex-col items-start w-full p-10 ">
           {data.cards.map((card: any, index: any) => {
             const isOpen = openIndex === index;
 
@@ -49,7 +49,7 @@ export default function OurServices({ data }: any) {
                     <Link
                       href={card.read.href}
                       onClick={(e) => e.stopPropagation()} // Prevent accordion toggle on link click
-                      className="border boder-white/80 text-white hover:border-transparent text-md lg:px-7 lg:py-3 rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300 "
+                      className="border boder-white/80 text-white hover:border-transparent text-md lg:px-7 lg:py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300 "
                     >
                       {card.read.text}
                     </Link>

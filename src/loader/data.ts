@@ -1,6 +1,6 @@
 import { fetchAPI } from "@/utils/fetch-api";
 import { getStrapiURL } from "@/utils/get-strapi-url";
-import { image } from "framer-motion/client";
+import { i, image } from "framer-motion/client";
 import qs from "qs";
 
 const globalQuery = qs.stringify({
@@ -111,6 +111,21 @@ const homepageQuery = qs.stringify({
           populate: {
             card: {
               populate: {
+                image: {
+                  fields: ["url", "name"],
+                },
+              },
+            },
+          },
+        },
+        "homepage.case-study": {
+          populate: {
+            cases: {
+              populate: {
+                logo: {
+                  fields: ["url", "name"],
+                },
+                tags: true,
                 image: {
                   fields: ["url", "name"],
                 },

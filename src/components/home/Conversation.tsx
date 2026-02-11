@@ -108,7 +108,7 @@ export default function Conversation({ data }: any) {
 
             <button
               type="submit"
-              className="w-full py-5 rounded-full text-xl font-bold bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:scale-[1.02] transition-transform active:scale-95"
+              className="w-full py-5 rounded-full text-xl hover:text-white cursor-pointer bg-white text-black  hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:scale-[1.02] transition-transform active:scale-95"
             >
               Submit
             </button>
