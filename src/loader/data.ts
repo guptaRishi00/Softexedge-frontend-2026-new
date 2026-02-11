@@ -192,6 +192,25 @@ const pageBySlugQuery = (slug: string) =>
               },
             },
           },
+          "aboutpage.why-softexedge": {
+            populate: {
+              image: {
+                fields: ["url", "name"],
+              },
+              cards: true,
+            },
+          },
+          "aboutpage.our-team": {
+            populate: {
+              members: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
         },
       },
     },

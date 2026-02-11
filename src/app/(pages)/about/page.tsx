@@ -1,7 +1,11 @@
 import About from "@/components/about/About";
 import AboutHeroSection from "@/components/about/AboutHeroSection";
 import Impact from "@/components/about/Impact";
-import { getPageBySlug } from "@/loader/data";
+import OurTeam from "@/components/about/OurTeam";
+import WhySoftexedge from "@/components/about/WhySoftexedge";
+import Brands from "@/components/home/Brands";
+import CommonCta from "@/components/shared/CommonCta";
+import { getHomepageData, getPageBySlug } from "@/loader/data";
 
 export default async function AboutPage() {
   const response = await getPageBySlug("about");
@@ -24,11 +28,29 @@ export default async function AboutPage() {
   const impactData = blocks.find(
     (block: any) => block.__component === "aboutpage.impact",
   );
+
+  const whySoftexedgeData = blocks.find(
+    (block: any) => block.__component === "aboutpage.why-softexedge",
+  );
+
+  const ourTeamData = blocks.find(
+    (block: any) => block.__component === "aboutpage.our-team",
+  );
+
+  const homePageResponse = await getHomepageData();
+
+  const brandsData = homePageResponse.data.blocks.find(
+    (block: any) => block.__component === "homepage.brands",
+  );
   return (
     <div>
       <AboutHeroSection data={heroSectionData} />
       <About data={aboutData} />
       <Impact data={impactData} />
+      <WhySoftexedge data={whySoftexedgeData} />
+      <OurTeam data={ourTeamData} />
+      <Brands data={brandsData} />
+      <CommonCta />
     </div>
   );
 }
