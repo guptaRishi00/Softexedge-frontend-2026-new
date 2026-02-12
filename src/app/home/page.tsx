@@ -55,7 +55,7 @@ export default async function Home({}: any) {
   );
 
   return (
-    <div className="p-3 space-y-5">
+    <div className="p-3 space-y-10">
       <HeroSectionHome data={heroSectionData} headerData={headerData} />
       <Brands data={brandsData} />
       <AboutUs data={aboutdata} />

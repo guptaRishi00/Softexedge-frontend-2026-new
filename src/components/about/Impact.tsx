@@ -4,21 +4,21 @@ export default function Impact({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full py-24 bg-white">
+    <section className="w-full my-10 bg-white">
       {/* Section Title */}
       <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 px-6">
         {data.title}
       </h2>
 
       {/* Stats Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24 px-10">
+      <div className="flex items-center gap-100 mb-24 px-16 w-full justify-center">
         {data.counts?.map((count: any) => (
           <div key={count.id} className="flex flex-col items-start">
-            <div className="flex items-center gap-2">
-              <span className="text-7xl md:text-8xl font-bold text-black">
+            <div className="flex items-end gap-2">
+              <span className="text-7xl md:text-9xl font-bold text-black">
                 {count.number}
               </span>
-              <span className="text-4xl md:text-5xl font-bold text-blue-600">
+              <span className="text-4xl md:text-7xl font-bold text-blue-600">
                 +
               </span>
             </div>

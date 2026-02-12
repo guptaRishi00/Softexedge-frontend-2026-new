@@ -18,7 +18,7 @@ export default async function PageLayout({
   );
 
   return (
-    <div className="p-3 space-y-5">
+    <div className="p-3">
       <Header headerData={headerData} />
       {children}
       <Footer data={footerData} />

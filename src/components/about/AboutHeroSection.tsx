@@ -6,7 +6,7 @@ export default function AboutHeroSection({ data }: any) {
   const titleTwo = titleParts.slice(2).join(" ");
 
   return (
-    <section className="w-full flex flex-col md:flex-row items-center justify-between p-8 md:p-16 gap-12 bg-white">
+    <section className="w-full flex flex-col md:flex-row lg:min-h-[96.5vh] items-center justify-between p-8 md:p-16 gap-12 bg-white">
       <div className="flex flex-col gap-16 w-full ">
         <h1 className="text-5xl md:text-7xl lg:text-[80px] leading-[1.1] font-bold text-[#04034C] max-w-lg">
           {titleOne}{" "}

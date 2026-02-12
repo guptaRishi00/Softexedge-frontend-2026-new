@@ -61,7 +61,7 @@ export default function OurTeam({ data }: any) {
                 exit={{ opacity: 0, scale: 0.95 }}
                 className="group relative"
               >
-                <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden mb-6">
+                <div className="relative aspect-[3/4] rounded-[20px] overflow-hidden mb-6">
                   <Image
                     src={member.image.url}
                     alt={member.name}

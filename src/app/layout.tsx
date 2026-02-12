@@ -50,9 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gilroy.variable} font-sans antialiased`}>
-        {children}
-      </body>
+      <body className={`${gilroy.className} antialiased`}>{children}</body>
     </html>
   );
 }

@@ -34,7 +34,7 @@ export default async function ContactPage() {
   );
 
   return (
-    <div>
+    <div className="space-y-10">
       <HeroSection data={heroSectionData} />
       <Conversation data={conversationData} />
       <Testimonial data={testimonialData} />

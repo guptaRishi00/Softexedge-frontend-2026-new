@@ -10,7 +10,7 @@ export default function Footer({ data }: any) {
   const mainTitle = fullTitle.replace("People Trust", "");
 
   return (
-    <footer className="w-full pb-10 min-h-screen flex flex-col items-center justify-between gap-10">
+    <footer className="w-full pb-10 min-h-screen flex flex-col items-center justify-between gap-10 mt-10">
       {/* Main Black Footer Box */}
       <div className="w-full min-h-[90vh] bg-black rounded-[20px] lg:p-20 p-10 text-white relative overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 h-full">

@@ -1,6 +1,5 @@
 import { fetchAPI } from "@/utils/fetch-api";
 import { getStrapiURL } from "@/utils/get-strapi-url";
-import { i, image } from "framer-motion/client";
 import qs from "qs";
 
 const globalQuery = qs.stringify({
