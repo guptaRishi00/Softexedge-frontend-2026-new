@@ -28,9 +28,11 @@ export default function AboutUs({ data }: any) {
           <div className="flex items-center w-full gap-18">
             {data.counts.map((count: any, index: number) => (
               <div className="flex flex-col items-start gap-3" key={index}>
-                <p className="text-white text-7xl font-medium">
+                <p className="text-white text-7xl font-semibold">
                   {count.number}
-                  <span className="text-[#2F85EA] font-medium">+</span>
+                  <span className="font-medium bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] bg-clip-text text-transparent">
+                    +
+                  </span>
                 </p>
                 <p className="text-white text-lg">{count.text}</p>
               </div>

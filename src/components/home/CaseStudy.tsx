@@ -33,7 +33,7 @@ export default function CaseStudy({ data }: any) {
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className={`text-base lg:text-lg font-bold whitespace-nowrap transition-all relative ${
+                className={`text-base lg:text-lg font-bold cursor-pointer whitespace-nowrap transition-all relative ${
                   activeIndex === index ? "text-black" : "text-gray-400"
                 }`}
               >
@@ -112,7 +112,7 @@ export default function CaseStudy({ data }: any) {
             </div>
 
             {/* Description */}
-            <div className="max-w-4xl mb-10">
+            <div className="w-full mb-10">
               {" "}
               {/* Reduced max-width and margin */}
               <h4 className="text-xl lg:text-2xl font-bold text-[#2D2D2D] mb-4">
@@ -140,7 +140,7 @@ export default function CaseStudy({ data }: any) {
               <div className="absolute inset-0 flex items-center justify-center z-20">
                 <Link
                   href={`/cases/${currentCase.id}`}
-                  className="px-7 py-3 rounded-full mt-55 bg-white text-black hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:text-white text-base font-bold shadow-md hover:scale-105 active:scale-95 transition-all"
+                  className="px-7 py-3 rounded-full mt-55 bg-white text-black hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:text-white text-base shadow-md transition-all"
                 >
                   Read More
                 </Link>

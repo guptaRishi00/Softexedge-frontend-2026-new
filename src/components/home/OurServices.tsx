@@ -84,7 +84,7 @@ export default function OurServices({ data }: any) {
 
                       <Link
                         href={card.view.href}
-                        className="border boder-white/80 text-white hover:border-transparent text-md lg:px-7 lg:py-3 rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300 inline-block w-fit"
+                        className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:border-[#3445E7] hover:text-white w-fit"
                       >
                         {card.view.text}
                       </Link>

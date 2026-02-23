@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function Conversation({ data }: any) {
@@ -16,7 +15,7 @@ export default function Conversation({ data }: any) {
         {title}
       </h2>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-stretch  mx-auto">
+      <div className="grid lg:grid-cols-2 gap-12 items-stretch mx-auto">
         {/* Left Side: Info Card */}
         <div className="relative rounded-[20px] overflow-hidden border border-white/10 min-h-[600px] flex flex-col">
           {/* Background Image with Overlay */}
@@ -40,20 +39,31 @@ export default function Conversation({ data }: any) {
               </p>
             </div>
 
-            {/* Contact Details */}
+            {/* Contact Details using your custom SVGs */}
             <div className="space-y-10">
               <ContactInfo
-                icon={<FiPhone className="text-blue-500" />}
+                icon={
+                  <Image src="/phone.svg" alt="Phone" width={28} height={28} />
+                }
                 label="Call us on"
                 value={card.call}
               />
               <ContactInfo
-                icon={<FiMail className="text-blue-500" />}
+                icon={
+                  <Image src="/message.svg" alt="Mail" width={28} height={28} />
+                }
                 label="Mail us on"
                 value={card.mail}
               />
               <ContactInfo
-                icon={<FiMapPin className="text-blue-500" />}
+                icon={
+                  <Image
+                    src="/location.svg"
+                    alt="Address"
+                    width={28}
+                    height={28}
+                  />
+                }
                 label="Office Address"
                 value={card.address}
               />
@@ -108,7 +118,7 @@ export default function Conversation({ data }: any) {
 
             <button
               type="submit"
-              className="w-full py-5 rounded-full text-xl hover:text-white cursor-pointer bg-white text-black  hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:scale-[1.02] transition-transform active:scale-95"
+              className="w-full py-5 rounded-full text-xl hover:text-white cursor-pointer bg-white text-black hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:scale-[1.02] transition-transform active:scale-95"
             >
               Submit
             </button>
@@ -130,7 +140,8 @@ function ContactInfo({
 }) {
   return (
     <div className="flex items-center gap-6 group">
-      <div className="bg-white p-4 rounded-full text-2xl flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+      {/* Icon Container */}
+      <div className="bg-white p-3 rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110 min-w-[64px] min-h-[64px]">
         {icon}
       </div>
       <div className="flex flex-col">

@@ -35,11 +35,11 @@ export default function Questions({ data }: any) {
                   {item.cta && (
                     <Link
                       href={item.cta.href}
-                      className={`text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 ${
+                      className={`text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 border ${
                         isOpen
-                          ? "bg-white text-black"
-                          : "border border-white/80 text-white hover:bg-white hover:text-black"
-                      }`}
+                          ? "bg-white text-black border-white"
+                          : "border-white/80 text-white"
+                      } hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white hover:border-[#3445E7] hover:scale-105`}
                       onClick={(e) => e.stopPropagation()}
                     >
                       {item.cta.text}

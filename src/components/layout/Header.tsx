@@ -6,13 +6,15 @@ import { IoIosArrowDown } from "react-icons/io";
 export default function Header({ headerData }: any) {
   return (
     <div className="flex items-center justify-between">
-      <Image
-        width={200}
-        height={200}
-        src={headerData.logoWhite.url}
-        alt={headerData.logoWhite.name}
-        className="lg:w-30"
-      />
+      <Link href={"/home"}>
+        <Image
+          width={200}
+          height={200}
+          src={headerData.logoWhite.url}
+          alt={headerData.logoWhite.name}
+          className="lg:w-30"
+        />
+      </Link>
 
       <div className="flex items-center justify-center gap-10">
         <div className="flex items-center cursor-pointer gap-2">

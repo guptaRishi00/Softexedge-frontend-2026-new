@@ -11,14 +11,14 @@ export default function Impact({ data }: any) {
       </h2>
 
       {/* Stats Section */}
-      <div className="flex items-center gap-100 mb-24 px-16 w-full justify-center">
+      <div className="flex items-center gap-80 mb-20 px-24 w-full justify-center">
         {data.counts?.map((count: any) => (
           <div key={count.id} className="flex flex-col items-start">
             <div className="flex items-end gap-2">
               <span className="text-7xl md:text-9xl font-bold text-black">
                 {count.number}
               </span>
-              <span className="text-4xl md:text-7xl font-bold text-blue-600">
+              <span className="font-medium md:text-7xl bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] bg-clip-text text-transparent">
                 +
               </span>
             </div>

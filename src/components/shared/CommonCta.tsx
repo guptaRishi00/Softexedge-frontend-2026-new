@@ -29,7 +29,7 @@ export default function CommonCta() {
   };
 
   return (
-    <div className="h-[60vh] bg-black rounded-3xl overflow-hidden relative flex items-center justify-center mt-5">
+    <div className="h-[60vh] bg-black rounded-3xl overflow-hidden relative flex items-center justify-center mt-5 mb-10">
       <div
         className="grid gap-2 w-[120%] -ml-[5%]"
         style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
@@ -50,7 +50,7 @@ export default function CommonCta() {
               }}
             >
               <div
-                className="absolute inset-0 bg-linear-to-b from-[#3445E7] via-[#2F85EA] to-[#07D6F3]"
+                className="absolute inset-0 bg-linear-to-b from-[#2f3fd1] via-[#2F85EA] to-[#06c2da]"
                 style={{ opacity: intensity }}
               />
 
