@@ -39,19 +39,24 @@ export default function Questions({ data }: any) {
                         isOpen
                           ? "bg-white text-black border-white"
                           : "border-white/80 text-white"
-                      } hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white hover:border-[#3445E7] hover:scale-105`}
+                      } hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white hover:border-transparent hover:scale-105`}
                       onClick={(e) => e.stopPropagation()}
                     >
                       {item.cta.text}
                     </Link>
                   )}
 
+                  {/* Updated Arrow Container */}
                   <div
-                    className={`border border-white/80 rounded-full p-2 lg:p-3 transition-transform duration-500 ${
-                      isOpen ? "rotate-90 bg-zinc-800" : ""
+                    className={`border border-white/80 rounded-full p-2 lg:p-3 transition-all duration-500 ${
+                      isOpen ? "rotate-90 bg-white" : "bg-transparent"
                     }`}
                   >
-                    <MdArrowOutward className="text-xl lg:text-3xl" />
+                    <MdArrowOutward
+                      className={`text-xl lg:text-3xl transition-colors duration-500 ${
+                        isOpen ? "text-black" : "text-white"
+                      }`}
+                    />
                   </div>
                 </div>
               </div>

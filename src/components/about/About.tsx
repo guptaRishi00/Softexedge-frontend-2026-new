@@ -25,9 +25,9 @@ export default function About({ data }: any) {
             <Link
               href={`/${data.cta.href}`}
               className="w-fit font-medium px-10 py-4 rounded-full bg-white text-black shadow-lg 
-             hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] 
-             hover:text-white
-             transition-[color,transform,background-color] duration-200 ease-in-out"
+  hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] 
+  hover:text-white
+  transition-all duration-200 ease-in-out"
             >
               {data.cta.text}
             </Link>

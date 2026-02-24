@@ -50,7 +50,7 @@ export default function CommonCta() {
               }}
             >
               <div
-                className="absolute inset-0 bg-linear-to-b from-[#2f3fd1] via-[#2F85EA] to-[#06c2da]"
+                className="absolute inset-0 bg-linear-to-b from-[#2f3fd1] via-[#2F85EA] to-[#2f3fd1]"
                 style={{ opacity: intensity }}
               />
 
@@ -64,7 +64,7 @@ export default function CommonCta() {
       </div>
 
       <div className="w-fit h-full bg-transparent absolute z-10 flex flex-col items-center justify-center gap-2">
-        <h2 className="text-white text-3xl md:text-6xl text-center max-w-2xl leading-snug">
+        <h2 className="text-white text-3xl md:text-6xl text-center max-w-2xl font-medium leading-snug">
           Ready to Get Started? Let’s Connect
         </h2>
 

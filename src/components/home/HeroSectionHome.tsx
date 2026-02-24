@@ -63,7 +63,7 @@ export default function HeroSectionHome({ headerData, data }: any) {
             {data?.letsTalk && (
               <Link
                 href={`/${data.letsTalk.href}`}
-                className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:border-[#3445E7] hover:text-white"
+                className="bg-transparent ring-1 ring-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:ring-transparent hover:text-white"
               >
                 {data.letsTalk.text}
               </Link>
@@ -71,8 +71,7 @@ export default function HeroSectionHome({ headerData, data }: any) {
             {data?.viewServices && (
               <Link
                 href={`/${data.viewServices.href}`}
-                className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] 
-             hover:border-[#3445E7] hover:text-white"
+                className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:border-none hover:text-white"
               >
                 {data.viewServices.text}
               </Link>

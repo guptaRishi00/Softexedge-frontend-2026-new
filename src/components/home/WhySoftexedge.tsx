@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { MdArrowOutward, MdOutlineArrowDownward } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxArrowBottomRight } from "react-icons/rx";
 
@@ -30,9 +30,14 @@ export default function WhySoftexedge({ data }: any) {
                     <p className="text-white text-2xl lg:text-4xl font-medium">
                       {list.title}
                     </p>
-                    <div className="border border-white/80 rounded-full p-2 lg:p-3 transition-colors duration-300">
+                    {/* Updated Arrow Container */}
+                    <div
+                      className={`border border-white/80 rounded-full p-2 lg:p-3 transition-all duration-300 ${
+                        isOpen ? "bg-white" : "bg-transparent"
+                      }`}
+                    >
                       {isOpen ? (
-                        <RxArrowBottomRight className="text-white text-xl lg:text-3xl" />
+                        <RxArrowBottomRight className="text-black text-xl lg:text-3xl" />
                       ) : (
                         <MdArrowOutward className="text-white text-xl lg:text-3xl" />
                       )}
@@ -63,7 +68,6 @@ export default function WhySoftexedge({ data }: any) {
           </div>
         </div>
 
-        {/* Changed: Used min-h for the image container so it maintains presence while parent grows */}
         <div className="relative w-full min-h-125 lg:min-h-full overflow-hidden rounded-[20px] grow">
           <Image
             src={data.image.url}

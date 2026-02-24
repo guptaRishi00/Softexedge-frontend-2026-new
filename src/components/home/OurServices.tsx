@@ -49,18 +49,18 @@ export default function OurServices({ data }: any) {
                     <Link
                       href={card.read.href}
                       onClick={(e) => e.stopPropagation()} // Prevent accordion toggle on link click
-                      className="border boder-white/80 text-white hover:border-transparent text-md lg:px-7 lg:py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300 "
+                      className="border border-white/80 text-white hover:border-transparent text-md lg:px-7 lg:py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300 "
                     >
                       {card.read.text}
                     </Link>
 
                     <div
-                      className={`border border-white/80 rounded-full p-3 transition-transform duration-500 ${
-                        isOpen ? "rotate-90 bg-zinc-800" : ""
+                      className={`border border-white/80 rounded-full p-3 transition-all duration-500 ${
+                        isOpen ? "rotate-90 bg-white" : "bg-transparent"
                       }`}
                     >
                       <MdArrowOutward
-                        color="white"
+                        color={isOpen ? "black" : "white"}
                         className="text-2xl lg:text-3xl"
                       />
                     </div>
@@ -84,7 +84,7 @@ export default function OurServices({ data }: any) {
 
                       <Link
                         href={card.view.href}
-                        className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:border-[#3445E7] hover:text-white w-fit"
+                        className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:border-transparent hover:text-white w-fit"
                       >
                         {card.view.text}
                       </Link>
