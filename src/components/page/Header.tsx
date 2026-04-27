@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header({ headerData }: any) {
   return (
-    <div className="flex items-center justify-between p-5">
+    <div className="flex items-center justify-between py-5 scale-93 origin-top">
       <Link href={"/home"}>
         <Image
           width={200}

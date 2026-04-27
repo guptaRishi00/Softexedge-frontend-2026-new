@@ -225,6 +225,184 @@ const pageBySlugQuery = (slug: string) =>
               },
             },
           },
+          "careerpage.hero-section": {
+            populate: {
+              images: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "careerpage.why-work": {
+            populate: {
+              lists: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+              image: {
+                fields: ["url", "name"],
+              },
+            },
+          },
+          "careerpage.find-career": {
+            populate: {
+              jobs: {
+                populate: {
+                  cta: true,
+                },
+              },
+            },
+          },
+          "careerpage.journey": {
+            populate: {
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "careerpage.culture": {
+            populate: {
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "brandingpage.hero-section": {
+            populate: {
+              ctas: true,
+              images: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "brandingpage.design": {
+            populate: {
+              image: {
+                fields: ["url", "name"],
+              },
+              cta: true,
+            },
+          },
+          "brandingpage.selected-works": {
+            populate: {
+              video: {
+                fields: ["url", "name"],
+              },
+            },
+          },
+          "brandingpage.strategic-depth": {
+            populate: {
+              cards: {
+                populate: {
+                  bg: {
+                    fields: ["url", "name"],
+                  },
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                  tags: true,
+                },
+              },
+            },
+          },
+          "brandingpage.testimonial": {
+            populate: {
+              cards: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "brandingpage.faq": {
+            populate: {
+              cards: {
+                populate: true,
+              },
+            },
+          },
+          "uiux.hero-section": {
+            populate: {
+              ctas: true,
+            },
+          },
+          "uiux.kinetic-process": {
+            populate: {
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "uiux.selected-works": {
+            populate: {
+              cards: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"],
+                  },
+                  tags: true,
+                },
+              },
+            },
+          },
+          "video.hero-section": {
+            populate: {
+              bg: {
+                fields: ["url", "name"],
+              },
+              ctas: true,
+            },
+          },
+          "video.blueprint": {
+            populate: {
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "video.global-views": {
+            populate: {
+              modules: true,
+              image: {
+                fields: ["url", "name"],
+              },
+            },
+          },
+          "video.video": {
+            populate: {
+              video: {
+                fields: ["url", "name"],
+              },
+            },
+          },
         },
       },
     },
@@ -237,6 +415,5 @@ export async function getPageBySlug(slug: string) {
   url.search = pageBySlugQuery(slug);
   return await fetchAPI(url.href, {
     method: "GET",
-    next: { revalidate: 3600 },
   });
 }

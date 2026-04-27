@@ -12,7 +12,7 @@ export default function Footer({ data }: any) {
   return (
     <footer className="w-full pb-6 min-h-screen flex flex-col items-center justify-between gap-10">
       {/* Main Black Footer Box */}
-      <div className="w-full min-h-[90vh] bg-black rounded-[20px] lg:p-20 p-10 text-white relative overflow-hidden">
+      <div className="w-full min-h-[90vh] bg-black rounded-[20px] lg:p-20 p-10 text-white relative overflow-hidden scale-[0.97] origin-top">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 h-full">
           {/* Left Column - REFACTORED SECTION */}
           <div className="flex flex-col justify-between h-full min-h-[500px]">
@@ -191,7 +191,7 @@ export default function Footer({ data }: any) {
       </div>
 
       {/* Brand & Copyright Bar */}
-      <div className="flex w-full flex-col md:flex-row items-center justify-between lg:px-3 gap-6">
+      <div className="flex w-full flex-col md:flex-row items-center justify-between lg:px-10 gap-6">
         {data.logo?.url && (
           <div className="relative h-12 w-48">
             <Image
