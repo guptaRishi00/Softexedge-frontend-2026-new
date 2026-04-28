@@ -4,12 +4,16 @@ import GlobalViews from "@/components/video/GlobalViews";
 import VideoShowcase from "@/components/video/VideoShowcase";
 import CommonCta from "@/components/shared/CommonCta";
 import { getPageBySlug } from "@/loader/data";
+import BrandingTestimonial from "@/components/branding/BrandingTestimonial";
+import BrandingFaq from "@/components/branding/BrandingFaq";
 
 const blockComponents: any = {
   "video.hero-section": VideoHero,
   "video.blueprint": VideoBlueprint,
   "video.global-views": GlobalViews,
   "video.video": VideoShowcase,
+  "brandingpage.testimonial": BrandingTestimonial,
+  "brandingpage.faq": BrandingFaq,
 };
 
 export default async function VideoPage() {

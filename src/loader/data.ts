@@ -403,6 +403,97 @@ const pageBySlugQuery = (slug: string) =>
               },
             },
           },
+          "software.enterprise": {
+            populate: {
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"],
+                  },
+                }
+              }
+            }
+          },
+          "software.tech-stack": {
+            populate: {
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"]
+                  }
+                }
+              }
+            }
+          },
+          "web.framework": {
+            populate: {
+              lists: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"]
+                  }
+                }
+              },
+              cards: {
+                populate: {
+                  icon: {
+                    fields: ["url", "name"]
+                  }
+                }
+              }
+            }
+          },
+          "web.our-process": {
+            populate: {
+              cards: true
+            }
+          },
+          "app.app-stack": {
+            populate: {
+              cards: true
+            }
+          },
+          "app.our-development": {
+            populate: {
+              cards: true
+            }
+          },
+          "casestudy.featured": {
+            populate: {
+              cards: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"]
+                  },
+                  funding: true,
+                  downloads: true
+                }
+              }
+            }
+          },
+          "casestudy.showcase": {
+            populate: {
+              image: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"]
+                  }
+                }
+              }
+            }
+          },
+          "casestudy.more-cases": {
+            populate: {
+              cards: {
+                populate: {
+                  image: {
+                    fields: ["url", "name"]
+                  },
+
+                }
+              }
+            }
+          }
         },
       },
     },

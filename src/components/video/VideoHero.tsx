@@ -10,56 +10,55 @@ export default function VideoHero({ data }: any) {
 
   const { title, description, bg, ctas } = data;
 
-  // Split title to highlight the last word as shown in image
   const words = title?.split(" ") || [];
   const mainTitle = words.slice(0, -1).join(" ");
   const highlightWord = words[words.length - 1];
 
   return (
-    <section className="relative w-full min-h-[85vh] flex items-center overflow-hidden bg-black rounded-[20px]">
+    <section className="relative w-full lg:min-h-[96.5vh] flex items-center overflow-hidden bg-black -mt-[112px] pt-[112px]">
       {/* Background Image with Dark Overlay */}
       {bg?.url && (
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-x-0 inset-y-0 z-0 rounded-[20px] overflow-hidden">
           <Image
             src={getImageUrl(bg.url)}
             alt={bg.name || "Video Content Hero"}
             fill
-            className="object-cover opacity-50"
+            className="object-cover object-[75%_center] opacity-80"
             priority
             unoptimized
           />
-          <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent" />
+          {/* A strong gradient to ensure the left side remains entirely black */}
+          <div className="absolute inset-0 bg-linear-to-r from-[#030303] from-20% via-[#030303]/90 via-50% to-transparent" />
         </div>
       )}
 
       {/* Content Container */}
-      <div className="relative z-10 w-full px-6 md:px-10 lg:px-20 py-20">
-        <div className="max-w-4xl flex flex-col gap-8 lg:gap-10">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 py-20">
+        <div className="max-w-[550px] flex flex-col gap-6 lg:gap-8">
           {/* Typography Scale */}
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl lg:text-[90px] font-extrabold text-white leading-[1.05] tracking-tighter">
+            <h1 className="text-6xl md:text-6xl lg:text-[90px] font-[900] text-white leading-[1.05] tracking-tight">
               {mainTitle}{" "}
-              <span className="block bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] bg-clip-text text-transparent">
+              <span className="block text-[#2B6CF2]">
                 {highlightWord}
               </span>
             </h1>
           </div>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-xl leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-[22px] text-white/80 leading-relaxed font-light mt-2 max-w-md">
             {description}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-5 mt-4">
+          <div className="flex flex-wrap items-center gap-5 mt-6">
             {ctas?.map((cta: any, index: number) => (
               <Link
                 key={cta.id}
                 href={`/${cta.href}`}
-                className={`px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 ${
-                  index === 0
-                    ? "bg-white text-black hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white"
-                    : "border-2 border-white/20 text-white hover:bg-white hover:text-black"
-                }`}
+                className={`px-9 py-3.5 rounded-full font-semibold text-[17px] transition-all duration-300 ${index === 0
+                  ? "bg-white text-[#2B6CF2] hover:bg-gray-100"
+                  : "border-[1.5px] border-white text-white hover:bg-white hover:text-black"
+                  }`}
               >
                 {cta.text}
               </Link>

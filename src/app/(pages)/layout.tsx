@@ -18,8 +18,10 @@ export default async function PageLayout({
   );
 
   return (
-    <div className="p-3">
-      <Header headerData={headerData} />
+    <div className="">
+      <div className="relative z-50">
+        <Header headerData={headerData} />
+      </div>
       {children}
       <Footer data={footerData} />
     </div>
