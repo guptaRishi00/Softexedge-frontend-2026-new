@@ -12,7 +12,7 @@ export default function KineticProcess({ data }: any) {
   const highlightWord = "KINETIC";
 
   return (
-    <section className="w-full bg-black rounded-[20px] p-10 lg:p-20 text-white mt-10 scale-[0.97] origin-top">
+    <section className="w-full bg-black p-10 lg:p-20 text-white rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col gap-16 lg:gap-24">
         {/* HEADER SECTION */}
         <div className="space-y-6">

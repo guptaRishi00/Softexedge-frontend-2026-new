@@ -20,7 +20,7 @@ export default function FeaturedCases({ data }: any) {
     );
 
     return (
-        <section className="w-full py-16 lg:py-24 px-6 lg:px-16 bg-white">
+        <section className="w-full py-16 lg:py-24 px-6 lg:px-16 bg-white rounded-[20px] scale-[0.97] origin-top mt-5">
             <div className="w-full mx-auto flex flex-col gap-12 lg:gap-16">
 
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">

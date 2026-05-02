@@ -22,7 +22,7 @@ export default function VideoShowcase({ data }: any) {
   };
 
   return (
-    <section className="w-full overflow-hidden bg-white scale-[0.97] origin-top">
+    <section className="w-full overflow-hidden bg-white rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto">
         <div
           className="relative group cursor-pointer aspect-video rounded-[20px] lg:rounded-[20px] overflow-hidden bg-black"

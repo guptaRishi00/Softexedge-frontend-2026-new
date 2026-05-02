@@ -11,7 +11,6 @@ import CoreDisciplines from "@/components/marketing/CoreDisciplines";
 
 const blockComponents: any = {
     "brandingpage.hero-section": MarketingHero,
-
     "brandingpage.selected-works": SelectedWorks,
     "brandingpage.strategic-depth": CoreDisciplines,
     "brandingpage.testimonial": BrandingTestimonial,

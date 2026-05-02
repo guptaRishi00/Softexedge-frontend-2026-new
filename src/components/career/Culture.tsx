@@ -5,11 +5,11 @@ export default function Culture({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-white py-16 lg:py-20 px-6 lg:px-12 scale-[0.97] origin-top">
+    <section className="w-full bg-white py-16 lg:py-20 px-6 lg:px-12 rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto">
         {/* Section Header */}
         <div className="space-y-4 mb-16">
-          <h2 className="text-5xl lg:text-6xl font-bold text-[#04034C] tracking-tight">
+          <h2 className="text-5xl lg:text-6xl font-bold text-black tracking-tight">
             {data.title}
           </h2>
           <p className="text-gray-500 text-lg lg:text-xl leading-relaxed max-w-2xl">

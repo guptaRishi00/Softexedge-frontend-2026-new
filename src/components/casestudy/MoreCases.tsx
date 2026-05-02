@@ -15,7 +15,7 @@ export default function MoreCases({ data }: any) {
   const remainingWords = words.slice(1).join(" ");
 
   return (
-    <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-16">
+    <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-16 rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col gap-10 lg:gap-14">
 
         <div className="flex flex-col gap-4">

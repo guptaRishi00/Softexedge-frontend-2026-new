@@ -37,7 +37,7 @@ export default function VideoHero({ data }: any) {
         <div className="max-w-[550px] flex flex-col gap-6 lg:gap-8">
           {/* Typography Scale */}
           <div className="space-y-2">
-            <h1 className="text-6xl md:text-6xl lg:text-[90px] font-[900] text-white leading-[1.05] tracking-tight">
+            <h1 className="text-6xl md:text-6xl lg:text-[70px] font-[900] text-white">
               {mainTitle}{" "}
               <span className="block text-[#2B6CF2]">
                 {highlightWord}

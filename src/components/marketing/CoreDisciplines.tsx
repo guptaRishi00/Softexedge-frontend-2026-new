@@ -16,7 +16,7 @@ export default function CoreDisciplines({ data }: any) {
     const highlightWord = words.slice(1).join(" ");
 
     return (
-        <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-10 overflow-hidden">
+        <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-10 overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
             <div className="w-full mx-auto flex flex-col gap-12 lg:gap-16">
 
                 {/* SECTION HEADER */}

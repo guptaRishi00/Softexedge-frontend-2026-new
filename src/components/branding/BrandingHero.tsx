@@ -17,7 +17,7 @@ export default function BrandingHero({ data }: any) {
     images?.map((img: any) => img.image) || [];
 
   return (
-    <section className="relative w-full bg-white px-6 md:px-10 lg:px-16 py-10 lg:py-20 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative w-full bg-white px-6 md:px-10 lg:px-16 py-10 lg:py-20 overflow-hidden min-h-[90vh] flex items-center rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="relative z-10 w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-8 lg:gap-10">

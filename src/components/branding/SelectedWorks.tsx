@@ -11,7 +11,7 @@ export default function SelectedWorks({ data }: any) {
   const highlightWord = words[1] || "Works";
 
   return (
-    <section className="w-full bg-black rounded-[20px] overflow-hidden p-8 lg:p-20 text-white mt-10 scale-[0.97] origin-top">
+    <section className="w-full bg-black overflow-hidden p-8 lg:p-20 text-white rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col items-center gap-16">
         {/* SECTION HEADER */}
         <div className="text-center space-y-4 max-w-2xl">

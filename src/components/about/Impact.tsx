@@ -4,7 +4,7 @@ export default function Impact({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full my-10 bg-white">
+    <section className="w-full bg-white rounded-[20px] scale-[0.97] origin-top mt-5">
       {/* Section Title */}
       <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 px-6">
         {data.title}

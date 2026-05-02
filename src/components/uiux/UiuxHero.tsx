@@ -11,7 +11,7 @@ export default function UiuxHero({ data }: any) {
   const highlightWord = words.slice(3).join(" "); // "Attention"
 
   return (
-    <section className="relative w-full min-h-[70vh] flex flex-col items-center justify-center px-6 py-20 lg:py-20 overflow-hidden bg-white scale-[0.97] origin-top">
+    <section className="relative w-full min-h-[70vh] flex flex-col items-center justify-center px-6 py-20 lg:py-20 overflow-hidden bg-white rounded-[20px] scale-[0.97] origin-top mt-5">
       {/* FOREGROUND CONTENT */}
       <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center gap-10">
         <h1 className="text-5xl md:text-7xl lg:text-[100px] font-extrabold text-black leading-[1.05] tracking-tighter">

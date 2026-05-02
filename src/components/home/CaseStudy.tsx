@@ -13,7 +13,7 @@ export default function CaseStudy({ data }: any) {
   const currentCase = data.cases[activeIndex];
 
   return (
-    <section className="w-full py-12 bg-white overflow-hidden">
+    <section className="w-full py-12 bg-white overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
       {" "}
       {/* Reduced py-20 to py-12 */}
       <div className="px-6 lg:px-10 mx-auto">

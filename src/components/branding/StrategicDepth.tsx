@@ -15,7 +15,7 @@ export default function StrategicDepth({ data }: any) {
   const highlightWord = words[1];
 
   return (
-    <section className="w-full bg-white py-16 lg:py-20 px-6 lg:px-10 overflow-hidden">
+    <section className="w-full bg-white py-16 lg:py-20 px-6 lg:px-10 overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col gap-12 lg:gap-16">
         <div className="flex flex-col gap-6">
           <h2 className="text-5xl lg:text-[84px] font-bold uppercase text-black">

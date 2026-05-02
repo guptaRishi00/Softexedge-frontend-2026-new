@@ -57,7 +57,7 @@ export default function FindCareer({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="bg-white py-16 lg:py-20 px-6 lg:px-12 scale-[0.97] origin-top">
+    <section className="bg-white py-16 lg:py-20 px-6 lg:px-12 rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto">
         {/* Header Area */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">

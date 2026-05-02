@@ -14,7 +14,7 @@ export default function SelectedWorksUiux({ data }: any) {
   const highlightWord = words[1];
 
   return (
-    <section className="w-full bg-black rounded-[20px] py-16 lg:py-24 px-6 lg:px- text-white mt-10 scale-[0.97] origin-top">
+    <section className="w-full bg-black py-16 lg:py-24 px-6 lg:px- text-white rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col gap-12 lg:gap-20">
         <div className="text-center space-y-5 max-w-3xl mx-auto">
           <h2 className="text-4xl lg:text-[72px] font-extrabold tracking-tighter uppercase leading-none">

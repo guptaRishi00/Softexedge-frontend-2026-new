@@ -11,7 +11,7 @@ export default function HeroSection({ data }: any) {
   const images = data.images || []; //
 
   return (
-    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-between p-8 md:p-10 gap-12 bg-white">
+    <section className="w-full h-screen flex flex-col md:flex-row items-center justify-between p-8 md:p-10 gap-12 bg-white rounded-[20px] scale-[0.97] origin-top mt-5">
       {/* Left Side: Content */}
       <div className="flex flex-col gap-10 w-full lg:w-1/2">
         <h1 className="text-5xl md:text-7xl lg:text-[80px] leading-[1.1] font-bold text-[#04034C] max-w-xl">

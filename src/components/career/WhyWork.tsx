@@ -5,8 +5,8 @@ export default function WhyWork({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-black rounded-[20px] overflow-hidden mt-10 scale-[0.97] origin-top">
-      <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 p-8 lg:p-20">
+    <section className="w-full bg-black overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
+      <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 p-8 lg:px-10 lg:py-16">
         {/* Left Side: Image Container */}
         <div className="w-full lg:w-1/2 aspect-[4/3] lg:h-[500px] relative rounded-[32px] overflow-hidden shadow-2xl">
           <Image

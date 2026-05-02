@@ -9,7 +9,7 @@ export default function FrameworkStack({ data }: any) {
     const { title, description, lists, cards } = data;
 
     return (
-        <section className="w-full bg-black rounded-[20px] py-14 lg:py-20 px-6 lg:px-10 text-white overflow-hidden scale-[0.97] origin-top">
+        <section className="w-full bg-black py-14 lg:py-20 px-6 lg:px-10 text-white overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
             <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
                 {/* LEFT: 2×2 framework cards grid */}

@@ -35,11 +35,11 @@ export default function BrandingTestimonial({ data }: any) {
 
   return (
     <section
-      className="w-full bg-black rounded-[20px] py-12 lg:py-16 px-6 lg:px-12 text-white overflow-hidden scale-[0.97] origin-top"
+      className="w-full bg-black py-12 lg:py-16 px-6 lg:px-12 text-white overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16">
+      <div className="w-full mx-auto flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16">
         {/* LEFT SIDE: HEADER & NAVIGATION (Scaled) */}
         <div className="w-full lg:w-[30%] flex flex-col justify-between gap-8 z-10 bg-black">
           <div className="space-y-4">

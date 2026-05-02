@@ -13,7 +13,7 @@ export default function VideoBlueprint({ data }: any) {
   const highlightWord = words[1];
 
   return (
-    <section className="w-full bg-black rounded-[20px] py-14 lg:py-20 px-6 lg:px-10 text-white mt-10 overflow-hidden scale-[0.97] origin-top">
+    <section className="w-full bg-black py-14 lg:py-20 px-6 lg:px-10 text-white overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col gap-10 lg:gap-16">
         <div className="space-y-5">
           <h2 className="text-4xl lg:text-[72px] font-bold uppercase tracking-tighter leading-tight">
@@ -28,11 +28,11 @@ export default function VideoBlueprint({ data }: any) {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap gap-6">
+        <div className="flex flex-col md:flex-row flex-wrap lg:flex-nowrap gap-0">
           {cards?.map((card: any) => (
             <div
               key={card.id}
-              className="w-full md:w-[calc(50%-12px)] lg:w-1/4 bg-[#1A1A1A] rounded-[20px] p-6 lg:p-8 flex flex-col gap-5 transition-all duration-300 hover:bg-[#222222] border border-white/5 hover:border-white/10 group scale-[0.97]"
+              className="w-full md:w-[calc(50%-12px)] lg:w-1/4 bg-[#1A1A1A] rounded-[20px] p-6 lg:px-8 lg:py-16 flex flex-col gap-5 transition-all duration-300 hover:bg-[#222222] border border-white/5 hover:border-white/10 group scale-[0.97]"
             >
               <div className="w-10 h-10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
                 {card.icon?.url && (

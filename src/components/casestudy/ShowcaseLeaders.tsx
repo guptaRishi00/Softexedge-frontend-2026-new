@@ -31,7 +31,7 @@ export default function ShowcaseLeaders({ data }: any) {
   };
 
   return (
-    <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-10 overflow-hidden">
+    <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-10 overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col gap-10 lg:gap-14 items-center">
         <h2 className="text-3xl lg:text-[44px] font-[900] tracking-tight text-center max-w-4xl mx-auto text-[#1F1F1F] leading-snug">
           {renderTitle()}

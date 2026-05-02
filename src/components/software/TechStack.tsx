@@ -13,7 +13,7 @@ export default function TechStack({ data }: any) {
     const rest = words.slice(1).join(" ");
 
     return (
-        <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-10">
+        <section className="w-full bg-white py-16 lg:py-24 px-6 lg:px-10 rounded-[20px] scale-[0.97] origin-top mt-5">
             <div className="w-full mx-auto flex flex-col gap-14 lg:gap-20">
 
                 <div className="flex flex-col gap-5">

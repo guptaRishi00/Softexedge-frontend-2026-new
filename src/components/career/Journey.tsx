@@ -12,7 +12,7 @@ export default function Journey({ data }: any) {
   const lastPart = titleParts.slice(2).join(" "); // "to Joining"
 
   return (
-    <section className="w-full bg-black rounded-[20px] py-16 lg:py-24 px-6 lg:px-20 overflow-hidden">
+    <section className="w-full bg-black py-12 lg:py-16 px-6 lg:px-16 overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col items-center lg:gap-20">
         {/* Section Header */}
         <h2 className="text-4xl lg:text-6xl font-bold text-white mb-20 text-center tracking-tight">

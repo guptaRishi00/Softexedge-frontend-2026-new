@@ -6,7 +6,7 @@ export default function OurDevelopment({ data }: any) {
     const { title, description, cards } = data;
 
     return (
-        <section className="w-full bg-black rounded-[20px] py-14 lg:py-20 px-6 lg:px-10 text-white overflow-hidden scale-[0.97] origin-top">
+        <section className="w-full bg-black py-14 lg:py-20 px-6 lg:px-10 text-white overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
             <div className="w-full mx-auto flex flex-col gap-10 lg:gap-14">
 
                 <div className="space-y-3">

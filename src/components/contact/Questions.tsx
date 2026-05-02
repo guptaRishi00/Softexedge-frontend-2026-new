@@ -11,7 +11,7 @@ export default function Questions({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-black rounded-[20px] p-10 lg:p-20 text-white">
+    <section className="w-full bg-black p-10 lg:p-20 text-white rounded-[20px] scale-[0.97] origin-top mt-5">
       <h2 className="text-4xl lg:text-6xl font-bold mb-16">{data.title}</h2>
 
       <div className="flex flex-col w-full px-10">

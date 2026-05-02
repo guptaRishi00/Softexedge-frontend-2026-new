@@ -17,7 +17,7 @@ export default function MarketingHero({ data }: any) {
     const [img1, img2, img3, img4] = displayImages;
 
     return (
-        <section className="relative w-full bg-white px-6 lg:px-10 py-16 lg:py-24 overflow-hidden">
+        <section className="relative w-full bg-white px-6 lg:px-10 py-16 lg:py-24 overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
 
             {/* Background watermark text */}
             <div
@@ -127,7 +127,7 @@ export default function MarketingHero({ data }: any) {
 
                     {/* Stat card — bottom-left, row 3, cols 1–2 */}
                     <div
-                        className="rounded-[20px] flex flex-col justify-center items-center bg-linear-to-br from-[#3445E7] via-[#2F85EA] to-[#07D6F3] text-white shadow-xl"
+                        className="rounded-[20px] flex flex-col justify-end items-start p-8 bg-linear-to-br from-[#3445E7] via-[#2F85EA] to-[#07D6F3] text-white shadow-xl"
                         style={{ gridColumn: '1 / 3', gridRow: '3 / 4' }}
                     >
                         <span className="text-4xl font-bold">10+</span>

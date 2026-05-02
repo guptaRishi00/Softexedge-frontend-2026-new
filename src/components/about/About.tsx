@@ -5,7 +5,7 @@ export default function About({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-black rounded-[20px] overflow-hidden p-8 lg:p-10 text-white">
+    <section className="w-full bg-black overflow-hidden p-8 lg:p-10 text-white rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="flex flex-col lg:flex-row gap-12 items-center">
         {/* Left Content Side */}
         <div className="flex-1 flex flex-col gap-8">

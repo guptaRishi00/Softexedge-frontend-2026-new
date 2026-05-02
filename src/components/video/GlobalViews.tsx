@@ -13,7 +13,7 @@ export default function GlobalViews({ data }: any) {
   const mainTitle = words.slice(1).join(" ");
 
   return (
-    <section className="w-full bg-white py-14 lg:py-20 px-6 lg:px-16 overflow-hidden scale-[0.97] origin-top">
+    <section className="w-full bg-white py-14 lg:py-20 px-6 lg:px-16 overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
         <div className="w-full lg:w-1/2 flex flex-col gap-10 lg:gap-14">
@@ -23,7 +23,7 @@ export default function GlobalViews({ data }: any) {
                 {highlightPart}
               </span>
               <br />
-              <span className="text-[#04034C]">{mainTitle}</span>
+              <span className="text-black">{mainTitle}</span>
             </h2>
           </div>
 

@@ -13,7 +13,7 @@ export default function BrandingFaq({ data }: any) {
   const { title, description, cards } = data;
 
   return (
-    <section className="w-full bg-white py-12 lg:py-16 px-6 lg:px-16 mt-6 scale-[0.97] origin-top">
+    <section className="w-full bg-white py-12 lg:py-16 px-6 lg:px-16 rounded-[20px] scale-[0.97] origin-top mt-5">
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
         {/* LEFT COLUMN: SCALED HEADER */}
         <div className="w-full lg:w-[40%] space-y-4">
