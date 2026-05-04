@@ -42,8 +42,7 @@ export default async function page({}: Props) {
       <FindCareer data={findCareerData} />
       <Journey data={journeyData} />
       <Culture data={cultureData} />
-      <div className="p-3">
-        {" "}
+      <div className="p-3 mb-14">
         <CommonCta />
       </div>
     </div>

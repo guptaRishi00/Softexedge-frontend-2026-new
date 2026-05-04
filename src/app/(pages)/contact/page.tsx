@@ -34,13 +34,13 @@ export default async function ContactPage() {
   );
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-14">
       <HeroSection data={heroSectionData} />
-      <div className="p-3">
+      <div className="p-3 mb-8">
         <Conversation data={conversationData} />
       </div>
       <Testimonial data={testimonialData} />
-      <div className="p-3">
+      <div className="p-3 mb-8 space-y-14">
         <Questions data={questionData} />
         <CommonCta />
       </div>

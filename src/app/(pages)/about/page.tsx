@@ -43,15 +43,17 @@ export default async function AboutPage() {
     (block: any) => block.__component === "homepage.brands",
   );
   return (
-    <div className="p-3">
+    <div className="p-3 ">
       <AboutHeroSection data={heroSectionData} />
-      <About data={aboutData} />
-      <Impact data={impactData} />
-      <WhySoftexedge data={whySoftexedgeData} />
-      <OurTeam data={ourTeamData} />
-      <div className="">
-        <Brands data={brandsData} />
-        <CommonCta />
+      <div className="space-y-20">
+        <About data={aboutData} />
+        <Impact data={impactData} />
+        <WhySoftexedge data={whySoftexedgeData} />
+        <OurTeam data={ourTeamData} />
+        <div className="mb-8">
+          <Brands data={brandsData} />
+          <CommonCta />
+        </div>
       </div>
     </div>
   );

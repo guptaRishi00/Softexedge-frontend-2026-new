@@ -16,7 +16,7 @@ export default function Herosection({ data }: any) {
   console.log(imageFour?.url);
 
   return (
-    <section className="w-full bg-white px-6 md:px-10 lg:py-15 lg:px-15 rounded-[20px]">
+    <section className="w-full bg-white px-6 md:px-10 lg:py-15 lg:px-15 rounded-[20px] lg:min-h-[90vh]">
       <div className="w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-12">

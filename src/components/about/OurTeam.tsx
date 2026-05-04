@@ -22,14 +22,14 @@ export default function OurTeam({ data }: any) {
   }, [activeTab, data.members]);
 
   return (
-    <section className="w-full bg-white rounded-[20px] lg:py-15">
+    <section className="w-full bg-white rounded-[20px]">
       <div className="px-10 mx-auto">
         <h2 className="text-4xl md:text-6xl font-bold text-black mb-12">
           {data.title}
         </h2>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-4 border-b border-gray-200 mb-12">
+        <div className="flex flex-wrap gap-4 border-b border-gray-200 mb-18">
           {tabs.map((tab: any) => (
             <button
               key={tab}

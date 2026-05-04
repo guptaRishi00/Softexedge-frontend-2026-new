@@ -42,11 +42,8 @@ export default function Journey({ data }: any) {
                   className="relative group flex flex-col lg:items-center"
                 >
                   {/* Glassmorphism Card */}
-                  <div className="ml-14 lg:ml-0 lg:mt-10 bg-white/2 group-hover:bg-white/6 border border-white/5 group-hover:border-white/15 backdrop-blur-sm rounded-3xl p-6 md:p-8 w-full flex-1 flex flex-col relative overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-[#2F85EA]/5">
+                  <div className="ml-14 lg:ml-0 lg:mt-10 bg-white/2 group-hover:bg-white/6 border border-white/5 group-hover:border-white/15 backdrop-blur-sm rounded-3xl p-6 md:p-8 w-full flex-1 flex flex-col relative overflow-hidden transition-all duration-500 group-hover:-translate-y-2 ">
                     {/* Large Background Watermark Number */}
-                    <span className="absolute -bottom-6 -right-2 text-[100px] font-black text-white/3 group-hover:text-white/6 transition-colors pointer-events-none select-none leading-none">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
 
                     {/* Icon Container */}
                     <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-white/10 to-transparent p-px mb-6 inline-flex">
@@ -67,7 +64,7 @@ export default function Journey({ data }: any) {
 
                     {/* Text Content */}
                     <div className="relative z-10 space-y-3">
-                      <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[#078df3] transition-colors duration-300">
+                      <h3 className="text-xl md:text-2xl font-bold text-white transition-colors duration-300">
                         {step.title}
                       </h3>
                       <p className="text-white/60 text-sm md:text-base leading-relaxed">

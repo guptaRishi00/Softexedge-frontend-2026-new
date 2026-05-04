@@ -12,7 +12,7 @@ export default function WhySoftexedge({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-black lg:py-15 lg:px-15 overflow-hidden rounded-[20px]">
+    <section className="w-full bg-black lg:py-10 lg:px-10 overflow-hidden rounded-[20px]">
       <div className="flex flex-col lg:flex-row gap-12 items-stretch">
         {/* Left Side Content */}
         <div className="flex-1 flex flex-col justify-between py-4">
@@ -27,7 +27,7 @@ export default function WhySoftexedge({ data }: any) {
               return (
                 <div
                   key={card.id}
-                  className="w-full border-b border-white/20 py-8 cursor-pointer group"
+                  className="w-full border-b border-white py-8 cursor-pointer group"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
                   <div className="flex items-center justify-between">
@@ -57,7 +57,7 @@ export default function WhySoftexedge({ data }: any) {
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="text-white/60 text-lg mt-6 max-w-lg leading-relaxed">
+                        <p className="text-white text-lg mt-6 max-w-lg leading-relaxed">
                           {card.description}
                         </p>
                       </motion.div>

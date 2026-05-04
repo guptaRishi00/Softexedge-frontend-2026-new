@@ -61,11 +61,11 @@ export default function FindCareer({ data }: any) {
       <div className="w-full mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-          <div className="space-y-3 max-w-xl">
+          <div className="space-y-8 max-w-xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight">
               {data.title}
             </h2>
-            <p className="text-gray-500 text-base lg:text-lg leading-relaxed">
+            <p className="text-black text-base lg:text-lg leading-relaxed">
               {data.description}
             </p>
           </div>
@@ -199,7 +199,7 @@ function JobCard({
           >
             <div className="px-6 lg:px-8 pb-8 pt-4">
               <div className="flex flex-col lg:flex-row justify-between items-start gap-6">
-                <p className="text-gray-500 text-base lg:max-w-2xl leading-relaxed flex-1">
+                <p className="text-[#424754] text-base lg:max-w-2xl leading-relaxed flex-1">
                   {job.description}
                 </p>
 
