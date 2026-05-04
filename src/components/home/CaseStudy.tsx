@@ -13,7 +13,7 @@ export default function CaseStudy({ data }: any) {
   const currentCase = data.cases[activeIndex];
 
   return (
-    <section className="w-full py-12 bg-white overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
+    <section className="w-full py-15 bg-white overflow-hidden rounded-[20px]">
       {" "}
       {/* Reduced py-20 to py-12 */}
       <div className="px-6 lg:px-10 mx-auto">
@@ -140,7 +140,7 @@ export default function CaseStudy({ data }: any) {
               <div className="absolute inset-0 flex items-center justify-center z-20">
                 <Link
                   href={`/cases/${currentCase.id}`}
-                  className="px-7 py-3 rounded-full mt-55 bg-white text-black hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:text-white text-base shadow-md transition-all"
+                  className="px-7 py-3 rounded-full mt-55 font-medium bg-white text-black hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:text-white text-base"
                 >
                   Read More
                 </Link>

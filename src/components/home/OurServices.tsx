@@ -20,17 +20,17 @@ export default function OurServices({ data }: any) {
   }, [openIndex]);
 
   return (
-    <div className="w-full lg:min-h-[96.5vh] min-h-150 bg-black rounded-[20px] relative overflow-hidden">
-      <div className="lg:py-15 lg:px-15">
+    <div className="w-full h-auto bg-black rounded-[20px] relative overflow-hidden">
+      <div className="lg:py-15 lg:px-15 lg:flex lg:flex-col lg:items-start lg:justify-center lg:gap-7">
         <p className="text-white text-5xl font-bold">{data.title}</p>
 
-        <div className="flex flex-col items-start w-full p-10 ">
+        <div className="flex flex-col items-start w-full">
           {data.cards.map((card: any, index: any) => {
             const isOpen = openIndex === index;
 
             return (
               <div
-                className="w-full py-10 flex flex-col items-start gap-10"
+                className="w-full pt-14 flex flex-col items-start gap-10"
                 key={index}
               >
                 <div
@@ -49,7 +49,7 @@ export default function OurServices({ data }: any) {
                     <Link
                       href={card.read.href}
                       onClick={(e) => e.stopPropagation()} // Prevent accordion toggle on link click
-                      className="border border-white/80 text-white hover:border-transparent text-md lg:px-7 lg:py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300 "
+                      className="border border-white/80 text-white hover:border-transparent text-md lg:px-7 lg:py-3 rounded-full hover:bg-white hover:text-black transition-colors duration-300 font-medium"
                     >
                       {card.read.text}
                     </Link>
@@ -84,7 +84,7 @@ export default function OurServices({ data }: any) {
 
                       <Link
                         href={card.view.href}
-                        className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:border-transparent hover:text-white w-fit"
+                        className="bg-transparent border border-white text-white text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:border-transparent hover:text-white w-fit font-medium"
                       >
                         {card.view.text}
                       </Link>

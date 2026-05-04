@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { getImageUrl } from "@/utils/get-image-url";
 
@@ -15,33 +14,29 @@ export default function VideoHero({ data }: any) {
   const highlightWord = words[words.length - 1];
 
   return (
-    <section className="relative w-full lg:min-h-[96.5vh] flex items-center overflow-hidden bg-black -mt-[112px] pt-[112px]">
-      {/* Background Image with Dark Overlay */}
+    <section className="relative w-full lg:min-h-[96.5vh] flex items-center overflow-hidden bg-black -mt-[150px] pt-[112px]">
+      {/* Background Video */}
       {bg?.url && (
-        <div className="absolute inset-x-0 inset-y-0 z-0 rounded-[20px] overflow-hidden">
-          <Image
-            src={getImageUrl(bg.url)}
-            alt={bg.name || "Video Content Hero"}
-            fill
-            className="object-cover object-[75%_center] opacity-80"
-            priority
-            unoptimized
-          />
-          {/* A strong gradient to ensure the left side remains entirely black */}
-          <div className="absolute inset-0 bg-linear-to-r from-[#030303] from-20% via-[#030303]/90 via-50% to-transparent" />
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video
+            className="w-full h-full object-cover object-[75%_center] opacity-80"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={getImageUrl(bg.url)} type="video/mp4" />
+          </video>
         </div>
       )}
 
-      {/* Content Container */}
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-24 py-20">
+      {/* Content */}
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-16 py-20">
         <div className="max-w-[550px] flex flex-col gap-6 lg:gap-8">
-          {/* Typography Scale */}
           <div className="space-y-2">
             <h1 className="text-6xl md:text-6xl lg:text-[70px] font-[900] text-white">
               {mainTitle}{" "}
-              <span className="block text-[#2B6CF2]">
-                {highlightWord}
-              </span>
+              <span className="block text-[#2B6CF2]">{highlightWord}</span>
             </h1>
           </div>
 
@@ -49,16 +44,17 @@ export default function VideoHero({ data }: any) {
             {description}
           </p>
 
-          {/* CTA Buttons */}
+          {/* CTA */}
           <div className="flex flex-wrap items-center gap-5 mt-6">
             {ctas?.map((cta: any, index: number) => (
               <Link
                 key={cta.id}
                 href={`/${cta.href}`}
-                className={`px-9 py-3.5 rounded-full font-semibold text-[17px] transition-all duration-300 ${index === 0
-                  ? "bg-white text-[#2B6CF2] hover:bg-gray-100"
-                  : "border-[1.5px] border-white text-white hover:bg-white hover:text-black"
-                  }`}
+                className={`px-9 py-3.5 rounded-full font-semibold text-[17px] transition-all duration-300 ${
+                  index === 0
+                    ? "bg-white text-[#2B6CF2] hover:bg-gray-100"
+                    : "border-[1.5px] border-white text-white hover:bg-white hover:text-black"
+                }`}
               >
                 {cta.text}
               </Link>

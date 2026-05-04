@@ -16,12 +16,12 @@ export default function Herosection({ data }: any) {
   console.log(imageFour?.url);
 
   return (
-    <section className="w-full bg-white px-6 md:px-10 lg:px-16 py-10 lg:py-20 rounded-[20px] scale-[0.97] origin-top mt-5">
+    <section className="w-full bg-white px-6 md:px-10 lg:py-15 lg:px-15 rounded-[20px]">
       <div className="w-full mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-12">
           <div className="flex flex-col leading-tight">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-[#04034C]">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-black">
               {firstPart}
             </h1>
 
@@ -36,7 +36,7 @@ export default function Herosection({ data }: any) {
 
           <Link
             href="/contact"
-            className="inline-block w-fit px-6 py-3 rounded-full bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] text-white font-medium hover:opacity-90 transition"
+            className="inline-block w-fit px-8 py-4 rounded-full hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] hover:text-white font-medium hover:opacity-90 border-2 hover:border-white border-gray-300"
           >
             Open Positions
           </Link>

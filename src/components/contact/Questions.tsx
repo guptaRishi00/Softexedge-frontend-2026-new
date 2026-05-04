@@ -11,10 +11,10 @@ export default function Questions({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-black p-10 lg:p-20 text-white rounded-[20px] scale-[0.97] origin-top mt-5">
-      <h2 className="text-4xl lg:text-6xl font-bold mb-16">{data.title}</h2>
+    <section className="w-full bg-black py-16 px-6 lg:px-20 text-white rounded-[20px]">
+      <h2 className="text-4xl lg:text-6xl font-bold mb-10">{data.title}</h2>
 
-      <div className="flex flex-col w-full px-10">
+      <div className="flex flex-col w-full px-3">
         {data.list.map((item: any, index: number) => {
           const isOpen = openIndex === index;
 
@@ -35,11 +35,11 @@ export default function Questions({ data }: any) {
                   {item.cta && (
                     <Link
                       href={item.cta.href}
-                      className={`text-md lg:px-7 lg:py-3 rounded-full transition-all duration-300 border ${
+                      className={`text-md lg:px-7 lg:py-3 rounded-full border ${
                         isOpen
                           ? "bg-white text-black border-white"
                           : "border-white/80 text-white"
-                      } hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white hover:border-transparent hover:scale-105`}
+                      } hover:bg-linear-to-r hover:from-[#3445E7] hover:border-none hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white hover:border-transparent font-medium`}
                       onClick={(e) => e.stopPropagation()}
                     >
                       {item.cta.text}

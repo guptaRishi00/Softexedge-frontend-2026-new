@@ -12,7 +12,7 @@ export default function WhySoftexedge({ data }: any) {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-black p-8 md:p-12 lg:p-10 overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
+    <section className="w-full bg-black lg:py-15 lg:px-15 overflow-hidden rounded-[20px]">
       <div className="flex flex-col lg:flex-row gap-12 items-stretch">
         {/* Left Side Content */}
         <div className="flex-1 flex flex-col justify-between py-4">

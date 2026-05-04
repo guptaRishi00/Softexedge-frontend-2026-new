@@ -12,7 +12,7 @@ export default function Footer({ data }: any) {
   return (
     <footer className="w-full pb-6 min-h-screen flex flex-col items-center justify-between gap-10">
       {/* Main Black Footer Box */}
-      <div className="w-full min-h-[90vh] bg-black rounded-[20px] lg:p-20 p-10 text-white relative overflow-hidden scale-[0.97] origin-top">
+      <div className="w-full min-h-[90vh] bg-black rounded-[20px] lg:py-15 lg:px-15 text-white relative overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 h-full">
           {/* Left Column - REFACTORED SECTION */}
           <div className="flex flex-col justify-between h-full min-h-[500px]">
@@ -62,7 +62,7 @@ export default function Footer({ data }: any) {
                   className="w-full bg-zinc-900/60 border border-white/10 rounded-full px-8 py-5 focus:outline-none focus:ring-1 focus:ring-[#2F85EA] transition-all placeholder:text-zinc-600 text-lg"
                 />
               </div>
-              <button className="w-full sm:w-auto bg-white text-black hover:text-white hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] px-12 py-5 rounded-full cursor-pointer text-lg hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg">
+              <button className="w-full sm:w-auto font-medium bg-white text-black hover:text-white hover:bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] px-12 py-5 rounded-full cursor-pointer text-lg hover:opacity-90 transition-opacity whitespace-nowrap shadow-lg">
                 Subscribe
               </button>
             </div>
@@ -193,7 +193,7 @@ export default function Footer({ data }: any) {
       {/* Brand & Copyright Bar */}
       <div className="flex w-full flex-col md:flex-row items-center justify-between lg:px-10 gap-6">
         {data.logo?.url && (
-          <div className="relative h-12 w-48">
+          <div className="relative h-10 w-30">
             <Image
               src={data.logo.url}
               alt="SoftExedge"
@@ -203,7 +203,7 @@ export default function Footer({ data }: any) {
             />
           </div>
         )}
-        <p className="text-zinc-500 font-medium text-lg text-center md:text-right">
+        <p className="text-zinc-500 font-medium text-md text-center md:text-right">
           {data.copyright ||
             `Copyright © ${new Date().getFullYear()} SoftEXedge Inc. All rights reserved.`}
         </p>

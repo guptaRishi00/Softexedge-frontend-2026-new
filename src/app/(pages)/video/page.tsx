@@ -35,7 +35,9 @@ export default async function VideoPage() {
         const Component = blockComponents[block.__component];
         return Component ? <Component key={index} data={block} /> : null;
       })}
-      <CommonCta />
+      <div className="p-3">
+        <CommonCta />
+      </div>
     </main>
   );
 }

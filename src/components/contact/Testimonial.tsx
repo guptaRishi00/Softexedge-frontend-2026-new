@@ -49,7 +49,7 @@ export default function Testimonial({ data }: any) {
   }, []);
 
   return (
-    <section className="py-16 px-4 md:px-10 bg-white overflow-hidden rounded-[20px] scale-[0.97] origin-top mt-5">
+    <section className="py-16 px-4 lg:py-0 md:px-10 bg-white overflow-hidden rounded-[20px]">
       <div className="flex justify-between items-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-black">
           {data.title}

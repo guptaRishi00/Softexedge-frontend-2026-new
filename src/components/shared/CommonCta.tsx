@@ -29,7 +29,7 @@ export default function CommonCta() {
   };
 
   return (
-    <div className="h-[60vh] bg-black rounded-[20px] overflow-hidden relative flex items-center justify-center mt-5 mb-5 scale-[0.97] origin-top">
+    <div className="h-[60vh] bg-black rounded-[20px] overflow-hidden relative flex items-center justify-center mt-5">
       <div
         className="grid gap-2 w-[120%] -ml-[5%]"
         style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
@@ -44,7 +44,7 @@ export default function CommonCta() {
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="relative h-24 sm:h-32 rounded-2xl p-[0.8px] overflow-hidden transition-all duration-300 ease-out"
+              className="relative h-24 sm:h-32 rounded-2xl p-[1.5px] overflow-hidden transition-all duration-300 ease-out"
               style={{
                 backgroundColor: intensity > 0 ? "transparent" : "#171717",
               }}
@@ -71,13 +71,13 @@ export default function CommonCta() {
         <div className="lg:flex lg:gap-6 flex-col lg:flex-row flex items-center gap-4 mt-4">
           <Link
             href={"/contact"}
-            className="bg-white text-md lg:px-7 lg:py-3 rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300"
+            className="bg-white font-medium text-md lg:px-7 lg:py-3 rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300"
           >
             let's talk
           </Link>
           <Link
             href={"/contact"}
-            className="bg-white text-md lg:px-7 lg:py-3 rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300"
+            className="bg-white font-medium text-md lg:px-7 lg:py-3 rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300"
           >
             View our work
           </Link>

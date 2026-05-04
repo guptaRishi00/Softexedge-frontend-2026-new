@@ -11,7 +11,7 @@ export default function WhySoftexedge({ data }: any) {
 
   return (
     <div className="w-full bg-black rounded-[20px] relative overflow-hidden transition-all duration-500 ease-in-out">
-      <div className="flex flex-col lg:flex-row items-stretch w-full justify-between p-10 lg:p-10 gap-10">
+      <div className="flex flex-col lg:flex-row items-stretch w-full justify-between lg:py-15 lg:px-15 gap-10">
         <div className="w-full flex flex-col justify-start">
           <p className="text-white text-4xl lg:text-6xl font-bold leading-tight">
             {data.title}

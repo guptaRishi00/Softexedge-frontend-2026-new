@@ -36,13 +36,16 @@ export default async function page({}: Props) {
   );
 
   return (
-    <div>
+    <div className="">
       <Herosection data={heroSectionData} />
       <WhyWork data={whyWorkData} />
       <FindCareer data={findCareerData} />
       <Journey data={journeyData} />
       <Culture data={cultureData} />
-      <CommonCta />
+      <div className="p-3">
+        {" "}
+        <CommonCta />
+      </div>
     </div>
   );
 }

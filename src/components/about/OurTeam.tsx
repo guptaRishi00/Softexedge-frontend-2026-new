@@ -22,7 +22,7 @@ export default function OurTeam({ data }: any) {
   }, [activeTab, data.members]);
 
   return (
-    <section className="w-full bg-white rounded-[20px] scale-[0.97] origin-top mt-5">
+    <section className="w-full bg-white rounded-[20px] lg:py-15">
       <div className="px-10 mx-auto">
         <h2 className="text-4xl md:text-6xl font-bold text-black mb-12">
           {data.title}

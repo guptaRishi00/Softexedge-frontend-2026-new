@@ -23,7 +23,9 @@ export default async function PageLayout({
         <Header headerData={headerData} />
       </div>
       {children}
-      <Footer data={footerData} />
+      <div className="p-3">
+        <Footer data={footerData} />
+      </div>
     </div>
   );
 }

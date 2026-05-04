@@ -9,7 +9,7 @@ export default function AboutUs({ data }: any) {
 
   return (
     <div className="w-full lg:min-h-[96.5vh] h-150 bg-black rounded-[20px] relative overflow-hidden">
-      <div className="flex items-center justify-center h-full w-full lg:py-10 lg:px-10 gap-10">
+      <div className="flex items-center justify-center h-full w-full lg:py-15 lg:px-15 gap-10">
         <div className="flex flex-col items-start justify-between w-full h-full py-8">
           <div className="flex flex-col items-start gap-8">
             <p className="text-white text-5xl font-bold">{data.title}</p>
@@ -19,7 +19,7 @@ export default function AboutUs({ data }: any) {
             </p>
             <Link
               href={`/${data.cta.href}`}
-              className="bg-white text-md lg:px-7 lg:py-3 rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300"
+              className="bg-white text-md lg:px-7 lg:py-3 font-medium rounded-full hover:bg-linear-to-r hover:from-[#3445E7] hover:via-[#2F85EA] hover:to-[#07D6F3] hover:text-white transition-colors duration-300"
             >
               {data.cta.text}
             </Link>

@@ -12,10 +12,10 @@ export default function AboutHeroSection({ data }: any) {
   const images = data.images || [];
 
   return (
-    <section className="w-full flex flex-col md:flex-row lg:min-h-[96.5vh] items-center justify-between p-8 md:p-16 gap-12 bg-white rounded-[20px] scale-[0.97] origin-top mt-5">
+    <section className="w-full flex flex-col md:flex-row items-center justify-between p-8 md:p-16 gap-12 bg-white rounded-[20px]">
       {/* Left Side: Text Content */}
-      <div className="flex flex-col gap-10 w-full lg:w-1/2">
-        <h1 className="text-5xl md:text-7xl lg:text-[80px] leading-[1.1] font-bold text-[#04034C] max-w-lg">
+      <div className="flex flex-col gap-10 w-full lg:w-1/2 ">
+        <h1 className="text-5xl md:text-7xl lg:text-[80px] font-bold text-black max-w-xl">
           {titleOne}{" "}
           <span className="block md:inline bg-linear-to-r from-[#3445E7] via-[#2F85EA] to-[#07D6F3] bg-clip-text text-transparent">
             {titleTwo}

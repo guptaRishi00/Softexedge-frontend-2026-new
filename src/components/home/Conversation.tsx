@@ -9,7 +9,7 @@ export default function Conversation({ data }: any) {
   const { title, card } = data;
 
   return (
-    <section className="w-full bg-black py-16 px-6 lg:px-20 text-white rounded-[20px] scale-[0.97] origin-top mt-5">
+    <section className="w-full bg-black lg:py-15 lg:px-15 text-white rounded-[20px]">
       {/* Section Title */}
       <h2 className="text-center text-5xl lg:text-6xl font-bold mb-20">
         {title}
