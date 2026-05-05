@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function Journey() {
+export default function Journey({}: any) {
   // Static Data for the Journey Steps
   const journeySteps = [
     {

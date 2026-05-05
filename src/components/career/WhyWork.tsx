@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function WhyWork() {
+export default function WhyWork({data}:any) {
   const features = [
     {
       title: "Radical Autonomy",
